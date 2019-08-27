@@ -6,15 +6,24 @@ namespace _0606A1Sortieren
     {
         static void Main(string[] args)
         {
-            Boolean swap = false;
+            Boolean swap = true;
             Random zuf = new Random();
-            int[] unsorted = new int[zuf.Next(5,20)];
             int t;
+            /*
+                        int[] unsorted = new int[zuf.Next(5,20)];
 
-            for (int i = 0; i < unsorted.Length; i++)
-                unsorted[i] = zuf.Next(0, 100);
+                        for (int i = 0; i < unsorted.Length; i++)
+                            unsorted[i] = zuf.Next(0, 100);
+            */
+            int[] unsorted = new int[] { 5, 1, 4, 2, 8 };
 
-            do
+            Console.WriteLine("Unsortiert:");
+            foreach (int a in unsorted)
+                Console.Write("{0} ", a);
+            Console.WriteLine();
+            Console.WriteLine("Und nun sortieren wir:");
+
+            while (swap)
             {
                 swap = false;
                 for (int i = 1; i < unsorted.Length; i++)
@@ -25,10 +34,11 @@ namespace _0606A1Sortieren
                         unsorted[i] = t;
                         swap = true;
                     }
-                foreach (int a in unsorted)
-                    Console.Write("{0} ", a);
+                if (swap)
+                    foreach (int a in unsorted)
+                        Console.Write("{0} ", a);
                 Console.WriteLine();
-            } while (swap);
+            }
         }
     }
 }
