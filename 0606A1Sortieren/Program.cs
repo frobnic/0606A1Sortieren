@@ -7,8 +7,12 @@ namespace _0606A1Sortieren
         static void Main(string[] args)
         {
             Boolean swap = false;
-            int[] unsorted = new int[] { 5, 2, 6, 4, 8, 3, 8, 7, 2, 4, 5 };
+            Random zuf = new Random();
+            int[] unsorted = new int[zuf.Next(5,20)];
             int t;
+
+            for (int i = 0; i < unsorted.Length; i++)
+                unsorted[i] = zuf.Next(0, 100);
 
             do
             {
