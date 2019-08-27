@@ -9,13 +9,11 @@ namespace _0606A1Sortieren
             Boolean swap = true;
             Random zuf = new Random();
             int t;
-            /*
-                        int[] unsorted = new int[zuf.Next(5,20)];
+            int[] unsorted = new int[zuf.Next(5, 20)];
 
-                        for (int i = 0; i < unsorted.Length; i++)
-                            unsorted[i] = zuf.Next(0, 100);
-            */
-            int[] unsorted = new int[] { 5, 1, 4, 2, 8 };
+            for (int i = 0; i < unsorted.Length; i++)
+                unsorted[i] = zuf.Next(0, 100);
+            //int[] unsorted = new int[] { 5, 1, 4, 2, 8 };
 
             Console.WriteLine("Unsortiert:");
             foreach (int a in unsorted)
